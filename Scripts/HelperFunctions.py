@@ -181,7 +181,7 @@ def display_sample_images(clear_train, blurred_train):
 
 def load_and_compile_model(input_shape, model_directory = None, output_summary = True, deeper_model = True):
     if model_directory:
-        model = tf.keras.models.load_model("./Models/ImageDeblurModel.h5")
+        model = tf.keras.models.load_model(model_directory)
     else:
         if deeper_model:
             model = build_deblur_model(input_shape)
